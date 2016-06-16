@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+<persistence-unit name="demo" transaction-type="RESOURCE_LOCAL">
+	<class>model.Carga</class>
+	<class>model.Documento</class>
+	<class>model.DocumentosAsociado</class>
+	<class>model.FiscalizacionesDocuCarga</class>
+	<class>model.Operacione</class>
+	<class>model.PasosPuntosControl</class>
+	<class>model.PuntosControl</class>
+	<class>model.ViajesVehiculo</class>
+        <properties>
+            <property name="javax.persistence.jdbc.driver" value="oracle.jdbc.driver.OracleDriver" />
+            <property name="javax.persistence.jdbc.URL" value="jdbc:oracle:thin:@192.168.1.201:1521:orcl/EPV"/>
+            <property name="javax.persistence.jdbc.user" value="epv"/>
+            <property name="javax.persistence.jdbc.password" value="epv"/>
+            <property name="hibernate.connection.pool_size" value="1"/>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.Oracle11gDialect"/>
+            <property name="show_sql" value="true"/>
+            <!-- property name="hibernate.hbm2ddl.auto" value="update"/-->    
+ 
+        </properties>
+    </persistence-unit>
+</persistence>
