@@ -215,6 +215,10 @@ public class Carga implements Serializable {
 	@ManyToOne
 	@JoinColumn(name="ID_VIAJES_VEHICULOS")
 	private ViajesVehiculo viajesVehiculo;
+	
+	
+	
+	
 
 	//bi-directional many-to-one association to DocumentosAsociado
 	@OneToMany(mappedBy="carga")
